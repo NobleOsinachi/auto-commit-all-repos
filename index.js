@@ -6,7 +6,14 @@ console.log(repoDirectoryPath);
 
 const parentDirectoryPath = path.join(__dirname, '..');
 
-let [message, repo] = ['', ""];
+let commitMessage = "commit-message";
+
+let message = `${commitMessage}
+
+Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>
+`;
+
+let repo = ``;
 
 let gitCommand = `
 cd ${repo}
@@ -15,7 +22,7 @@ git pull origin
 
 git add .
 
-git commit -m "${message}"
+git commit -s -m "${message}"
 
 git push origin
 
