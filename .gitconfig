@@ -1,0 +1,34 @@
+[user]
+    name = Noble Osinachi
+    email = nobleosinachi98@gmail.com
+
+[core]
+    editor = nano
+    autocrlf = input
+    autocrlf = true
+    safecrlf = false
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+[push]
+    default = simple
+
+[remote "origin"]
+	url = git@github.com:NobleOsinachi/auto-commit-all-repos.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+

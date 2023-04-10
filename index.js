@@ -6,9 +6,26 @@ console.log(repoDirectoryPath);
 
 const parentDirectoryPath = path.join(__dirname, '..');
 
+let [message, repo] = ['', ""];
+
+let gitCommand = `
+cd ${repo}
+
+git pull origin
+
+git add .
+
+git commit -m "${message}"
+
+git push origin
+
+`;
+
+
+
 fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
     if (err) {
-        // console.log(err);
+        console.error(err);
         return;
     }
 
