@@ -1,8 +1,14 @@
-cd C:\Users\Noble\SOURCES\REPOS
-cd @noble failing hdd ssh
+# Current repo is "@noble failing hdd ssh"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "@noble failing hdd ssh"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -21,13 +27,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd auto-commit-all-repos
+
+        # Current repo is "auto-commit-all-repos"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "auto-commit-all-repos"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -46,13 +60,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd BirthdayEcardGenerator
+
+        # Current repo is "BirthdayEcardGenerator"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "BirthdayEcardGenerator"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -71,13 +93,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd bookworm
+
+        # Current repo is "bookworm"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "bookworm"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -96,13 +126,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd daily-git-commit
+
+        # Current repo is "daily-git-commit"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "daily-git-commit"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -121,13 +159,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd isaac-project
+
+        # Current repo is "isaac-project"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "isaac-project"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -146,13 +192,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd learning-solidity
+
+        # Current repo is "learning-solidity"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "learning-solidity"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -171,13 +225,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd NobleOsinachi
+
+        # Current repo is "NobleOsinachi"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "NobleOsinachi"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -196,13 +258,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd OTPGenerator
+
+        # Current repo is "OTPGenerator"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "OTPGenerator"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -221,13 +291,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd pinterest-clone
+
+        # Current repo is "pinterest-clone"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "pinterest-clone"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -246,13 +324,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd python-number-generator
+
+        # Current repo is "python-number-generator"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "python-number-generator"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -271,13 +357,21 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
 
-        cd C:\Users\Noble\SOURCES\REPOS
-cd vidly-react
+
+        # Current repo is "vidly-react"
+
+cd "C:\Users\Noble\SOURCES\REPOS"
+
+cd "vidly-react"
+
 git pull origin
+
 git add .
-git commit -s -m "Last updated on Tuesday April 11 2023 at 1:56:10PM
+
+git commit -s -m "Last updated on Tuesday April 11 2023 at 2:6:55PM
 
 Co-authored-by: David Oluwasegun <oluwasegundavid7@gmail.com>
 Co-authored-by: David Popoola <davieedpopoola@gmail.com>
@@ -296,6 +390,8 @@ Co-authored-by: josiahking <josiahaccounts@gmail.com>
 Co-authored-by: masaun <masaun@protonmail.com>
 Co-authored-by: femotizo <epebinuoluwafemi@gmail.com>
 Signed-off-by: Noble Osinachi <nobleosinachi98@gmail.com>"
+
 git push origin
+
 
         
