@@ -17,6 +17,14 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
 
 
     let content = "";
+
+    for (let dir of directories) {
+        // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
+        const collaborators = fs.readFileSync('./collaborators.txt', 'utf8').trim();
+        content += `\ncd "${parentDirectoryPath}"\ncd "${dir}"\ngit pull origin\ngit add .\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\ngit push origin\n
+        `;
+    }
+
     fs.writeFile(`./scripts/${currentTimestamp}.txt`, content, err => {
         if (err) {
             console.error(err);
@@ -24,22 +32,7 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
         }
 
 
-
-
-        for (let dir of directories) {
-            // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
-
-
-            const collaborators = fs.readFileSync('./collaborators.txt', 'utf8').trim();
-
-
-
-            content += `cd ${parentDirectoryPath}\ncd ${dir}\ngit pull origin\ngit add .\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\ngit push origin
-            `;
-        }
-
-
-        console.log("File created");
+        console.log("File created", currentTimestamp);
     });
 
 
