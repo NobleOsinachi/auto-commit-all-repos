@@ -1,11 +1,10 @@
 const path = require('path');
 const fs = require('fs');
-
+const { exec } = require('child_process');
 
 const parentDirectoryPath = path.join(__dirname, '..');
 const currentTimestamp = Math.floor(Date.now() / 1000);
-
-
+let content = "";
 
 fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
     if (err) {
@@ -13,33 +12,53 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
         return;
     }
 
-    const directories = files.filter(file => file.isDirectory()).map(directory => directory.name);
+    // const directories = files.filter(file => file.isDirectory()).map(directory => directory.name);
 
-
-    let content = "";
+    let directories = files.filter(file => {
+        // Check if the file is a directory
+        if (file.isDirectory()) {
+            // Check if the directory contains a .git folder
+            return fs.existsSync(`${parentDirectoryPath}/${file.name}/.git`);
+        }
+        return false;
+    }).map(directory => directory.name);
 
     for (let dir of directories) {
         // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
         const collaborators = fs.readFileSync('./collaborators.txt', 'utf8').trim();
-        content += `# Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n
-        `;
+        content += `\nECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
     }
 
-    fs.writeFile(`./scripts/${currentTimestamp}.txt`, content, err => {
-        if (err) {
-            console.error(err);
-            return;
-        }
+
+    // save script as powershell instead of batch
+    let file = `./scripts/${currentTimestamp}.ps1`;
+
+    fs.writeFile(file, content, err => {
+        // if (err) { console.error(err);return; }
+
+        if (err) throw err;
+
+        console.log("File created at:", currentTimestamp);
+
+        // execute the script in a new powershell window
+
+        command = `start powershell .\\${file}`;
 
 
-        console.log("File created", currentTimestamp);
+
+        exec(command, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.error(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+        });
     });
-
-
-
 });
-
-
 
 
 function dateString() {
@@ -53,17 +72,15 @@ function dateString() {
     const dayOfMonth = date.getDate();
     const year = date.getFullYear();
     let hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+
     const meridiem = hours < 12 ? 'AM' : 'PM';
 
     hours = hours % 12;
     hours = hours ? hours : 12;
 
-    const dateString = `${dayOfWeek} ${monthOfYear} ${dayOfMonth} ${year} at ${hours}:${minutes}:${seconds}${meridiem}`;
+    const dateString = `${dayOfWeek} ${monthOfYear} ${dayOfMonth} ${year} at ${hours.toString().padStart(2, '0')}:${minutes}:${seconds} ${meridiem}`;
 
-    // console.log(dateString);
     return dateString;
-
 }
-
