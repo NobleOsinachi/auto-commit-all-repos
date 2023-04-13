@@ -13,8 +13,6 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
         return;
     }
 
-    // const directories = files.filter(file => file.isDirectory()).map(directory => directory.name);
-
     let directories = files.filter(file => {
         // Check if the file is a directory
         if (file.isDirectory()) {
@@ -30,21 +28,18 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
         content += `ECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\nNew-Item -ItemType File -Path "logs\\${currentTimestamp}.log" -Force\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
     }
 
-
     // save script as powershell instead of batch
     let file = `./scripts/${currentTimestamp}.ps1`;
 
     fs.writeFile(file, content, err => {
-        // if (err) { console.error(err);return; }
-
         if (err) throw err;
 
         console.log("File created at:", currentTimestamp);
 
         // execute the script in a new powershell window
+        // command = `start powershell .\\${file}`;
 
-        command = `start powershell .\\${file}`;
-
+        command = `start powershell.exe -WindowStyle Hidden -File .\\${file}`;
 
 
         exec(command, (error, stdout, stderr) => {
