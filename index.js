@@ -26,8 +26,6 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
 
     for (let dir of directories) {
 
-        console.log(directories);
-
         console.log(process.cwd());
 
         // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
