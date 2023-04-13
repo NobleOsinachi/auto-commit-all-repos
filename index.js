@@ -1,6 +1,7 @@
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 const { exec } = require('child_process');
+const { timeStamp } = require("console");
 
 const parentDirectoryPath = path.join(__dirname, '..');
 const currentTimestamp = Math.floor(Date.now() / 1000);
@@ -24,9 +25,14 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
     }).map(directory => directory.name);
 
     for (let dir of directories) {
+
+        console.log(directories);
+
+        console.log(process.cwd());
+
         // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
         const collaborators = fs.readFileSync('./collaborators.txt', 'utf8').trim();
-        content += `ECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
+        content += `ECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\nNew-Item -ItemType File -Path "logs\\${timeStamp}.log" -Force\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
     }
 
 
