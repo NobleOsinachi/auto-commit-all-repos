@@ -26,7 +26,7 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
     for (let dir of directories) {
         // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
         const collaborators = fs.readFileSync('./collaborators.txt', 'utf8').trim();
-        content += `\nECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
+        content += `ECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
     }
 
 
