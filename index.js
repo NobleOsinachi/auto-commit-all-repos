@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
-const { timeStamp } = require("console");
+const randomCommitMessage = require('./message');
 
+// randomCommitMessage.randomCommitMessage();
 const parentDirectoryPath = path.join(__dirname, '..');
 const currentTimestamp = Math.floor(Date.now() / 1000);
 let content = "";
@@ -25,7 +26,7 @@ fs.readdir(parentDirectoryPath, { withFileTypes: true }, (err, files) => {
     for (let dir of directories) {
         // WRITE GIT COMMIT FILE IN SCRIPT FOLDER
         const collaborators = fs.readFileSync('./collaborators.txt', 'utf8').trim();
-        content += `ECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\nNew-Item -ItemType File -Path "logs\\${currentTimestamp}.log" -Force\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "Last updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
+        content += `ECHO Current repo is "${dir}"\n\ncd "${parentDirectoryPath}"\n\ncd "${dir}"\n\nNew-Item -ItemType File -Path "logs\\${currentTimestamp}.log" -Force\n\ngit pull origin\n\ngit add .\n\ngit commit -s -m "${randomCommitMessage()}, updated on ${dateString()}\n\n${collaborators}"\n\ngit push origin\n\n`;
     }
 
     // save script as powershell instead of batch

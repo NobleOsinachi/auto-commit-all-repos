@@ -1,12 +1,15 @@
 {
-  "name": "auto",
+  "name": "auto-commit-all-repos",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repository is a projec designed to automatically commit changes to multiple Git repositories located in the same folder. It contains code that can identify and track changes made to files in different repositories, and then automatically commit and push those changes back to the respective repositories on an hourly basis. The purpose of the project is to automate the process of maintaining multiple repositories with frequent updates or changes, such as in a large software development organization or for personal projects with many interrelated repositories.",
   "main": "index.js",
   "scripts": {
     "start": "cls&&node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "dependencies": {
+    "npm": "^1.0.0"
+  },
+  "author": "Noble Chukwukere",
   "license": "ISC"
 }
